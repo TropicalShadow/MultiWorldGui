@@ -12,7 +12,7 @@ plugins {
 }
 
 
-val bstats_id: Int? = 22930
+val bstats_id: Int? = 26727
 group = "club.tesseract"
 val packagelocation = "${group}.${project.name.lowercase()}"
 
@@ -48,6 +48,7 @@ repositories {
     mavenCentral()
     maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://libraries.minecraft.net")
+    maven("https://repo.onarandombox.com/content/groups/public/")
 
     // Aikar's Repository
     maven("https://repo.aikar.co/content/groups/aikar/")
@@ -58,6 +59,9 @@ dependencies {
     compileOnly("com.github.spotbugs:spotbugs-annotations:4.9.3")
     implementation("io.papermc:paperlib:1.0.8")
     spotbugsPlugins("com.h3xstream.findsecbugs:findsecbugs-plugin:1.14.0")
+
+    compileOnly("org.mvplugins.multiverse.core:multiverse-core:5.0.0-SNAPSHOT")
+    implementation("com.github.stefvanschie.inventoryframework:IF:0.11.2")
 
     // Command Framework (Aikar's Command Framework)
     implementation("co.aikar:acf-paper:0.5.1-SNAPSHOT")
@@ -92,7 +96,7 @@ tasks {
     }
 
     runServer{
-        minecraftVersion("1.21")
+        minecraftVersion("1.21.8t")
     }
 
     shadowJar {
@@ -102,6 +106,8 @@ tasks {
         // Aikar's Command Framework
         relocate("co.aikar.commands", "${packagelocation}.lib.aikar.commands")
         relocate("co.aikar.locales", "${packagelocation}.lib.aikar.locales")
+
+        relocate("com.github.stefvanschie.inventoryframework", "${packagelocation}.lib.inventoryframework")
 
         // Bstats
         relocate("org.bstats", "${packagelocation}.lib.bstats")

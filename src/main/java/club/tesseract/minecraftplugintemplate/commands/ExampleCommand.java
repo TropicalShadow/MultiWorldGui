@@ -1,6 +1,6 @@
 package club.tesseract.minecraftplugintemplate.commands;
 
-import club.tesseract.minecraftplugintemplate.MinecraftPluginTemplate;
+import club.tesseract.minecraftplugintemplate.MultiWorldGUI;
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.CommandIssuer;
 import co.aikar.commands.annotation.CommandAlias;
@@ -11,11 +11,11 @@ import co.aikar.commands.annotation.Subcommand;
 /**
  * An example command.
  */
-@CommandAlias("example")
+@CommandAlias("warps")
 public class ExampleCommand extends BaseCommand {
 
     @Dependency
-    private MinecraftPluginTemplate plugin;
+    private MultiWorldGUI plugin;
 
 
     @Subcommand("default")
