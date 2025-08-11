@@ -61,7 +61,7 @@ dependencies {
     spotbugsPlugins("com.h3xstream.findsecbugs:findsecbugs-plugin:1.14.0")
 
     compileOnly("org.mvplugins.multiverse.core:multiverse-core:5.0.0-SNAPSHOT")
-    implementation("com.github.stefvanschie.inventoryframework:IF:0.11.2")
+    implementation("com.github.stefvanschie.inventoryframework:IF:0.11.3")
 
     // Command Framework (Aikar's Command Framework)
     implementation("co.aikar:acf-paper:0.5.1-SNAPSHOT")
