@@ -60,7 +60,7 @@ dependencies {
     implementation("io.papermc:paperlib:1.0.8")
     spotbugsPlugins("com.h3xstream.findsecbugs:findsecbugs-plugin:1.14.0")
 
-    compileOnly("org.mvplugins.multiverse.core:multiverse-core:5.0.0-SNAPSHOT")
+    compileOnly("org.mvplugins.multiverse.core:multiverse-core:5.2.0")
     implementation("com.github.stefvanschie.inventoryframework:IF:0.11.2")
 
     // Command Framework (Aikar's Command Framework)
